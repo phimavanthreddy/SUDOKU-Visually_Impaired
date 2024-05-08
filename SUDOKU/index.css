@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s;
+    animation-delay: calc(.2s * var(--i));
+    background: -webkit-linear-gradient(#eee, #BFBFBF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  
+  h1 {
+    font-size: 62px;
+    text-align: center;
+    background: -webkit-linear-gradient(#eee, #161618);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #table {
+    display: grid;
+    grid-template-columns: repeat(9,11.107%);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 50%;
+  }
+  
+  input {
+    height: 70px;
+    text-align: center;
+    font-size: 280%;
+    background-color: #3A3B3C;
+  }
+  
+  body {
+    background-color: #121212;
+  }
+  
+  .gradient-border {
+    --borderWidth: 5px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .footer {
+    position: relative;
+  }
+  
+  p {
+    position: relative;
+    scroll-padding-block-end: 10%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 3px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3.3s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  html,
+  body {  
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+  } 
+  
+  .main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    color: #BFBFBF;
+  }
+  
+  .button {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1.9em;
+    transform: none;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    background: -webkit-linear-gradient(#eee, #AAAAAA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #buttonhead {
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+  }
+  
+  .button:after {
+    content: "";
+    height: 100%;
+    width: calc(100% + 20px);
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: 1s;
+  }
+  
+  .button:before {
+    content:"";
+    height: calc(100% + 20px);
+    width: 100%;
+    position: absolute; 
+    top: -10px;
+    left: -2px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: 1s;
+  }
+  
+  .button:hover:before {
+    transform: rotateY(180deg);
+  }
+  
+  .button:hover:after {
+    transform: rotateX(180deg);
+  }
+  
